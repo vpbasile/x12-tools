@@ -167,5 +167,11 @@ export default function App() {
         <div id="messageDisplay" className="col-12">{displayMessage(currentInputMessage)}</div>
       </div>
     </div>
+    <div id='safetyNote' className=''>
+      <p>While this app is published to the web, the data is all parsed and handled locally on the user's machine. No data is saved or transferred anywhere.  <span className='fw-bold'>
+          Please remember to handle all PII and PHI safely to protect the patients and other parties referenced in message data.
+        </span>
+      </p>
+    </div>
   </div>);
 }
