@@ -1,5 +1,8 @@
-# Getting Started with Create React App
+# X12 Tools
 
+Paste a message and press enter to display the contents in a readable format.  You can also use the trace mode to compare fields across different messages.
+
+## Note
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
