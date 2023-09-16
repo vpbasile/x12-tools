@@ -1,3 +1,4 @@
+import { Box, Center } from '@chakra-ui/react';
 import Field from '../components/Field';
 import { paddedFieldNum } from '../helper/helpers';
 
@@ -15,18 +16,20 @@ export default function Segment(props: {
 	const segmentID = segmentContents[0];
 	const segmentDelimiter = props.segmentDelimiter
 
-	let segmentClasses: string = `segment p-1 ` // ms-${loopNumber}
+	let segmentColor: string = ``
 	// Figure out how to style the segment
-	if ((segmentID === 'ISA') || (segmentID === 'IEA')) { segmentClasses += "bg-dark bg-opacity-10" }
+	if ((segmentID === 'ISA') || (segmentID === 'IEA')) { segmentColor = "green.500" }
 	// <> HL segments should be more visible.
-	if (segmentID === "HL") { segmentClasses += "bg-info bg-opacity-25" }
+	if (segmentID === "HL") { segmentColor = 'red.500' }
 
-	return (<h5 className={segmentClasses} key={`line-${linenumber}`}>
+	let z=0;
+	return (<Box key={`line-${linenumber}`} id={`line-${linenumber}`} w={'96'}>
 		{segmentContents.map((fieldContents, fieldNumber) => {
-			let toolTip = segmentID + paddedFieldNum(fieldNumber)
+			const toolTip = segmentID + paddedFieldNum(fieldNumber)
 			const fieldKey = `${loopNumber}-${segmentID}-${fieldNumber}`
-			return <Field key={fieldKey} fieldNumber={fieldNumber} contents={fieldContents} tooltip={toolTip} fieldDelimiter={fieldDelimiter} />
+			const nextKey = z++;
+			return <Center key={nextKey} id={`${nextKey}`}  display={'inline-block'}>< Field lineNumber={linenumber} fieldKey={fieldKey} fieldNumber={fieldNumber} contents={fieldContents} tooltip={toolTip} fieldDelimiter={fieldDelimiter} colorScheme={segmentColor} /></Center>
 		})}
 		{segmentDelimiter}
-	</h5>)
+	</Box>)
 }
