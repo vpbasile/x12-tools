@@ -2,7 +2,7 @@
 
 // 1. import `extendTheme` function
 import { ThemeConfig, extendTheme, withDefaultColorScheme, withDefaultVariant } from '@chakra-ui/react'
-import { defineStyle, defineStyleConfig } from '@chakra-ui/react'
+import { defineStyleConfig } from '@chakra-ui/react'
 // import { ComponentStyleConfig } from '@chakra-ui/react'
 
 // define the base component styles
