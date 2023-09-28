@@ -128,7 +128,7 @@ export default function App() {
         <Box p={3} ><ColorModeButton /></Box>
       </AppRow>
       <AppRow id='appContentRow' >
-        <Box id="leftCol" p={2} m={2}>
+        <Box id="leftCol" p={4}>
           {/* <ArraySelect choicesArray={modes} onChange={setMode} labelText='Mode:' /> */}
           <ParseDisplay parseMessage={parseMessage}
             setcurrentInputMessage={setcurrentInputMessage} currentInputMessage={currentInputMessage}

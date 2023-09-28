@@ -44,9 +44,9 @@ export default function ParseDisplay(props: propsType) {
         </Box>
     }
 
-    return <Box id="parsing" p={2} m={2} verticalAlign={'top'}>
+    return <Box id="parsing" p={4} verticalAlign={'top'}>
         <Collapse buttonText="Enter message.  Click to hide/show.">
-            <Stack p={2} m={2}>
+            <Stack p={4}>
                 <Textarea id="messageInput" h={'2xl'} w={'2xl'}
                     defaultValue={exampleMessage}
                     onChange={(e) => {
@@ -56,7 +56,7 @@ export default function ParseDisplay(props: propsType) {
                 ></Textarea>
             </Stack>
         </Collapse>
-        <Stack p={2} m={2}>
+        <Stack p={4}>
             <Heading as={'h2'}>Result</Heading>
             <Box id="messageDisplay" >{displayMessage(currentInputMessage)}</Box>
         </Stack>

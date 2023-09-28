@@ -31,11 +31,11 @@ export default function CompareDisplay(props: { segmentIDs: string[]; setwatchSe
         </Table>
     </TableContainer>;
 
-    return (<Container id="comparing" flex={13} p={2} m={2}>
+    return (<Container id="comparing" flex={13} p={4}>
         <Heading as={'h2'}>Compare</Heading>
-        <ErrorBoundary fallback={<Box p={2} m={2}>Error: Something went wrong</Box>}>
+        <ErrorBoundary fallback={<Box p={4}>Error: Something went wrong</Box>}>
             {myTable}
-            {<Box id="snapshotBox" p={2} m={2}><Text fontSize='lg'>Snapshots</Text><SnapshotTable snapshots={snapShots} deleteSnapshot={deleteSnapshot} /></Box>}
+            {<Box id="snapshotBox" p={4}><Text fontSize='lg'>Snapshots</Text><SnapshotTable snapshots={snapShots} deleteSnapshot={deleteSnapshot} /></Box>}
         </ErrorBoundary>
     </Container>
 
