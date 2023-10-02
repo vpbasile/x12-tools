@@ -127,6 +127,14 @@ export default function App() {
         <Heading as="h1">X12 Tools</Heading>
         <Box p={3} ><ColorModeButton /></Box>
       </AppRow>
+      <AppRow>
+        <List spacing={3} p={3}>
+          <Heading as={'h3'}>Notice</Heading>
+          <ListItem>{infoIcon}Though this app is published to the web, the data is all parsed and handled locally on the user's machine. No data is saved or transferred anywhere.
+          </ListItem>
+          <ListItem color={'red'}>{dangerIcon}Please remember to handle all PII and PHI safely to protect the patients and other parties referenced in message data.</ListItem>
+        </List>
+      </AppRow>
       <AppRow id='appContentRow' >
         <Box id="leftCol" p={4}>
           {/* <ArraySelect choicesArray={modes} onChange={setMode} labelText='Mode:' /> */}
@@ -141,12 +149,6 @@ export default function App() {
       </AppRow>
       <AppRow id='footer'>
         <Box p={10}>
-          <List spacing={3} p={3}>
-            <Heading as={'h3'}>Notice</Heading>
-            <ListItem>{infoIcon}Though this app is published to the web, the data is all parsed and handled locally on the user's machine. No data is saved or transferred anywhere.
-            </ListItem>
-            <ListItem color={'red'}>{dangerIcon}Please remember to handle all PII and PHI safely to protect the patients and other parties referenced in message data.</ListItem>
-          </List>
           <List>
             <Heading as={'h2'}>Links</Heading>
             <ListItem><Link href='https://x12.org/examples/005010x217/example-1a-referral-request-review'><ListIcon as={ExternalLinkIcon} color={'green.500'} />Example messages from X12.org</Link></ListItem>

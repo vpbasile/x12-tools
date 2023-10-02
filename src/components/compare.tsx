@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Input, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Input, Table, TableContainer, Tbody, Td, Th, Thead, Tr, Text } from "@chakra-ui/react";
 import { ErrorBoundary } from "react-error-boundary";
 import SnapshotTable from "./SnapshotTable";
 import ArraySelect from "./ArraySelect";
@@ -18,7 +18,6 @@ export default function CompareDisplay(props: { segmentIDs: string[]; setwatchSe
 
     const myTable = <TableContainer>
         <Table>
-            <TableCaption>Segments to watch</TableCaption>
             <Thead>{headerFooter}</Thead>
             <Tbody>
                 <Tr>
@@ -27,7 +26,7 @@ export default function CompareDisplay(props: { segmentIDs: string[]; setwatchSe
                     <Td><Input type="button" value="Snapshot" onClick={takeSnapShot} /></Td>
                 </Tr>
             </Tbody>
-            <Tfoot>{headerFooter}</Tfoot>
+            {/* <Tfoot>{headerFooter}</Tfoot> */}
         </Table>
     </TableContainer>;
 
