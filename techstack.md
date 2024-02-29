@@ -3,9 +3,9 @@
 ## Tech Stack
 vpbasile/x12-tools is built on the following main stack:
 
-- [React](https://reactjs.org/) – Javascript UI Libraries
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [TypeScript](http://www.typescriptlang.org) – Languages
+- [React](https://reactjs.org/) – Javascript UI Libraries
 - [ESLint](http://eslint.org/) – Code Review
 
 Full tech stack [here](/techstack.md)
@@ -16,9 +16,9 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 vpbasile/x12-tools is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
 
 Full tech stack [here](/techstack.md)
@@ -30,7 +30,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [vpbasile/x12-tools](https://github.com/vpbasile/x12-tools)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|15<br/>Tools used|01/05/24 <br/>Report generated|
+|15<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
