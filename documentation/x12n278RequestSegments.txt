@@ -1,0 +1,80 @@
+X12N 278 Request Segments
+Segment ID|Loop ID|Segment Name|esMD Usage
+ST|Not assigned|Transaction Set Header|M
+BHT|Not assigned|Beginning of Hierarchical Transaction|M
+HL|Loop ID-2000A|Utilization Management Organization (UMO) Level|M
+NM1|Loop ID-2010A|Utilization Management Organization (UMO) Name|M
+HL|Loop ID-2000B|Requester Level|M
+NM1|Loop ID-2010B|Requester Name|M
+REF|2010B|Requester Supplemental Identification|O
+N3|2010B|Requester Address|M
+N4|2010B|Requester City, State, Zip Code|M
+PER|2010B|Requester Contact Information|M
+PRV|2010B|Requester Provider Information|O
+HL|Loop ID-2000C|Subscriber Level|M
+NM1|Loop ID-2010C|Subscriber Name|M
+REF|2010C|Subscriber Supplemental Identification|O
+N3|2010C|Subscriber Address|M
+N4|2010C|Subscriber City, State, Zip Code|M
+DMG|2010C|Subscriber Demographic Information|M
+INS|2010C|Subscriber Relationship|N/U
+HL|Loop ID-2000D|Dependent Level|N/U
+HL|Loop ID-2000E|Patient Event Level|M
+TRN|2000E|Patient Event Tracking Number|O
+UM|2000E|Health Care Services Review Information|M
+REF|2000E|Previous Review Authorization Number|O
+REF|2000E|Previous Review Administrative Reference Number|O
+DTP|2000E|Accident Date|O
+DTP|2000E|Last Menstrual Period Date|O
+DTP|2000E|Estimated Date of Birth|O
+DTP|2000E|Onset of Current Symptoms or Illness Date|O
+DTP|2000E|Event Date|M
+HI|2000E|Patient Diagnosis|O
+HSD|2000E|Health Care Services Delivery|C
+CRC|2000E|Ambulance Certification Information|O
+CRC|2000E|Chiropractic Certification Information|O
+CRC|2000E|Durable Medical Equipment Information|O
+CRC|2000E|Oxygen Therapy Certification Information|O
+CRC|2000E|Functional Limitations Information|O
+CRC|2000E|Activities Permitted Information|O
+CRC|2000E|Mental Status Information|O
+CL1|2000E|Institutional Claim Code|O
+CR1|2000E|Ambulance Transport Information|O
+CMS XLC|Health Care Services – PA/PCR Request for Review
+CR2|2000E|Spinal Manipulation Service Information|O
+CR5|2000E|Home Oxygen Therapy Information|O
+CR6|2000E|Home Health Care Information|O
+PWK|2000E|Additional Patient Information|C
+MSG|2000E|Message Text|O
+NM1|Loop ID-2010EA|Patient Event Provider Name|C
+NM103|2010EA|Patient Event Provider Last or Organization Name|C
+NM104|2010EA|Patient Event Provider First Name|C
+NM105|2010EA|Patient Event Provider Middle Name|O
+NM107|2010EA|Patient Event Provider Name Suffix|O
+NM108|2010EA|Identification Code Qualifier|C
+NM109|2010EA|Patient Event Provider Identifier|C
+REF|2010EA|Patient Event Provider Supplemental Information|O
+N3|2010EA|Patient Event Provider Address|C
+N4|2010EA|Patient Event Provider City, State, Zip Code|C
+PER|2010EA|Patient Event Provider Contact Information|O
+PRV|2010EA|Patient Event Provider Information|O
+NM1|Loop ID-2010EB|Patient Event Transport Information|O
+N3|2010EB|Patient Event Transport Location Address|O
+N4|2010EB|Patient Event Transport Location City/State/Zip Code|O
+NM1|Loop ID-2010EC|Patient Event Other UMO Name|O
+REF|2010EC|Other UMO Denial Reason|O
+DTP|2010EC|Other UMO Denial Date|O
+HL|Loop ID-2000F|Service Level|M
+TRN|2000F|Service Trace Number|O
+UM|2000F|Health Care Services Review Information|O
+REF|2000F|Previous Review Authorization Number|O
+REF|2000F|Previous Review Administrative Reference Number|O
+DTP|2000F|Service Date|O
+SV1|2000F|Professional Service|C
+SV2|2000F|Institutional Service Line|C
+SV3|2000F|Dental Service|N/U
+TOO|2000F|Tooth Information|N/U
+HSD|2000F|Health Care Services Delivery|C
+PWK|2000F|Additional Service Information|C
+MSG|2000F|Message Text|O
+SE|Not assigned|Transaction Set Trailer|M
