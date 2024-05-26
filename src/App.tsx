@@ -1,22 +1,22 @@
-import { useState } from 'react';
 import { nanoid } from 'nanoid';
+import { useState } from 'react';
 
 // <> Import data from local files
-import segmentInfo from './data/segmentInfo.json'
-import { exampleMessage } from './data/example278R';
+import { exampleMessage } from './data/example271';
+import segmentInfo from './data/segmentInfo.json';
 
-import { parsedMessage, snapshot } from './helper/interfaceDefinitions';
-import { paddedFieldNum } from './helper/helpers';
-import { Box, Heading, List, ListItem, ListIcon, Collapse, Link } from '@chakra-ui/react';
-import { ExternalLinkIcon, InfoIcon, WarningTwoIcon } from '@chakra-ui/icons'
-import AppRow from './helper/appRow';
+import { ExternalLinkIcon, InfoIcon, WarningTwoIcon } from '@chakra-ui/icons';
+import { Box, Collapse, Heading, Link, List, ListIcon, ListItem } from '@chakra-ui/react';
 import CompareDisplay from './components/compare';
 import ParseDisplay from './components/parse';
+import AppRow from './helper/appRow';
 import ColorModeButton from './helper/colorModeButton';
+import { paddedFieldNum } from './helper/helpers';
+import { parsedMessage, snapshot } from './helper/interfaceDefinitions';
 import TodoList from './helper/TodoList';
 
 // <> Parsing Constants
-const segmentDelimiter = `~\n`;
+const segmentDelimiter = `~`;
 const fieldDelimitier = '*';
 
 export default function App() {
@@ -106,6 +106,7 @@ export default function App() {
       // if (foundSegments.length === 0) { alert(`No ${whatField} values found in the message`); return [] }
     });
     if (!foundAnyting) { alert(`No ${whatField} values found in the message`); }
+    // FIXME Sort the snapshots by line/segment number
     setSnapshots(tempSnapshots)
   }
 

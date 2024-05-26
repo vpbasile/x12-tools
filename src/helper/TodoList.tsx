@@ -1,5 +1,5 @@
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { List, Heading, ListItem, ListIcon } from "@chakra-ui/react";
+import { Heading, List, ListIcon, ListItem } from "@chakra-ui/react";
 
 export default function TodoList() {
 
@@ -7,7 +7,10 @@ export default function TodoList() {
 
   let i = 0;
   const todo: JSX.Element[] = [
+    <>Include line/segment numbers in snapshot data structure</>,
+    <>Sort the comparison table by line/segment number</>,
     <>Function to anonymize data</>,
+
   ];
 
 

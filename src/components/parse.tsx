@@ -1,4 +1,4 @@
-import { Box, Textarea, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, Textarea } from "@chakra-ui/react";
 import { exampleMessage } from "../data/example278R";
 import { parsedMessage } from "../helper/interfaceDefinitions";
 import Segment from "./Segment";
@@ -13,10 +13,7 @@ type propsType = {
 };
 
 export default function ParseDisplay(props: propsType) {
-    const currentInputMessage = props.currentInputMessage;
-    const setcurrentInputMessage = props.setcurrentInputMessage;
-    const parseMessage = props.parseMessage;
-
+    const { setcurrentInputMessage, currentInputMessage, parseMessage } = props;
 
     function displayMessage(messageText: string) {
         const parsedMessage: parsedMessage = parseMessage(messageText);
@@ -31,8 +28,7 @@ export default function ParseDisplay(props: propsType) {
             return (<Box key={`loop-${loopNumber}`} id={`loop-${loopNumber}`}>
                 {loop.map((segmentContents) => {
                     const lineNumber = ++lineCount;
-                    const segmentKey = `${lineNumber}-${loopNumber}-${segmentContents[0]}`
-                    return (<Segment key={segmentKey} loop={loopNumber} segmentContents={segmentContents} lineNumber={lineNumber} segmentDelimiter={props.segmentDelimiter} fieldDelimiter={props.fieldDelimiter} />)
+                    return (<Segment key={lineNumber} loop={loopNumber} segmentContents={segmentContents} lineNumber={lineNumber} segmentDelimiter={props.segmentDelimiter} fieldDelimiter={props.fieldDelimiter} />)
                 })}
             </Box>)
         })
