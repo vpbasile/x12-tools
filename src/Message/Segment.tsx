@@ -1,5 +1,5 @@
 import { Box, Center, Text } from '@chakra-ui/react';
-import Field from '../components/Field';
+import Field from './Field';
 import { paddedFieldNum } from '../helper/helpers';
 
 export default function Segment(props: {

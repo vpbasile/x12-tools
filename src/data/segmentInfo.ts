@@ -1,4 +1,4 @@
-[
+export const segmentInfo = [
 	{ "id": "BHT", "name": "" },
 	{ "id": "CL1", "name": "" },
 	{ "id": "CMS", "name": "" },
@@ -51,4 +51,6 @@
 	{ "id": "", "name": "" },
 	{ "id": "EQ", "name": "" },
 	{ "id": "AAA", "name": "" }
-  ]
+]
+
+export const segmentIDs = segmentInfo.map((eachsegment) => { return eachsegment.id })

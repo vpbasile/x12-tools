@@ -1,8 +1,8 @@
-import { Box, Heading, Stack, Text, Textarea } from "@chakra-ui/react";
+import { Box, Text, Textarea } from "@chakra-ui/react";
 import { exampleMessage } from "../data/example278R";
 import { parsedMessage } from "../helper/interfaceDefinitions";
+import AccordionSection from "../Layout/AccordionSection";
 import Segment from "./Segment";
-import Collapse from "./collapse";
 
 type propsType = {
     setcurrentInputMessage: React.Dispatch<string>;
@@ -40,21 +40,18 @@ export default function ParseDisplay(props: propsType) {
         </Box>
     }
 
-    return <Box id="parsing" p={4} verticalAlign={'top'}>
-        <Collapse buttonText="Enter message.  Click to hide/show.">
-            <Stack p={4}>
-                <Textarea id="messageInput" h={'2xl'} w={'2xl'}
-                    defaultValue={exampleMessage}
-                    onChange={(e) => {
-                        setcurrentInputMessage(e.target.value);
-                        console.log(currentInputMessage)
-                    }}
-                ></Textarea>
-            </Stack>
-        </Collapse>
-        <Stack p={4}>
-            <Heading as={'h2'}>Result</Heading>
+    return <>
+        <AccordionSection title="Enter Message">
+            <Textarea id="messageInput" h={'2xl'} w={'2xl'}
+                defaultValue={exampleMessage}
+                onChange={(e) => {
+                    setcurrentInputMessage(e.target.value);
+                    console.log(currentInputMessage)
+                }}
+            ></Textarea>
+        </AccordionSection>
+        <AccordionSection title="Parsed Message">
             <Box id="messageDisplay" >{displayMessage(currentInputMessage)}</Box>
-        </Stack>
-    </Box>;
+        </AccordionSection>
+    </ >;
 }
