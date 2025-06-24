@@ -7,7 +7,7 @@ export default function Layout(props: { children: React.ReactNode }) {
             <Accordion allowMultiple marginBottom={'2xl'}>
                 {props.children}
             </Accordion>
-            <VStack id='footer' p={2} textAlign='right' position='fixed' bottom='0' w='min-content' right='0' zIndex='1000'
+            <VStack borderRadius={'2xl'} id='footer' p={2} textAlign='right' position='fixed' bottom='0' w='min-content' right='0' zIndex='1000'
                 bgColor={'blackAlpha.700'}>
                 <Heading as="h1">X12 Tools</Heading>
                 <Box p={3} ><ColorModeButton /></Box>

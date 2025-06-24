@@ -21,16 +21,8 @@ const fieldDelimitier = '*';
 
 export default function App() {
 
-  // <> Define constants
-  // const modes = [
-  //   "Compare",
-  //   "Just parse",
-  //   // "AuthCert Stuff"
-  // ]
-
   // <> Define app states
   // const { isOpen, onClose } = useDisclosure() // Disclosure for safety warnings
-  // const [mode] = useState(modes[0])
   const [currentInputMessage, setcurrentInputMessage] = useState(exampleMessage)
 
   // <> Define the snapshot state
@@ -89,20 +81,16 @@ export default function App() {
   // Subfields
 
   function parseMessage(messageText: string): parsedMessage {
-    // console.log('Parsing message',messageText)
-    // console.log('segmentDelimiter',segmentDelimiter)
     let loopNumber = 0;
     const parsedMessage: parsedMessage = []
     parsedMessage[0] = []
     // Divide the message into segments
     const messageSegments = messageText.split(segmentDelimiter)
-    // console.log('messageSegments',messageSegments)
-    // We have to remove the extra tilde at the end
+    // Pop to remove the extra tilde at the end
     messageSegments.pop();
     messageSegments.forEach((segment) => {
       // Split the segment into fields
       const splitSegment = segment.split(fieldDelimitier)
-      // console.log('splitSegment', splitSegment)
       // If it's an HL segment, then we've found another loop
       if ((splitSegment[0] === "HL") || (splitSegment[0] === "IEA")) {
         // Create an array to store the segments in this loop
